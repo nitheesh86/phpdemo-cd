@@ -26,7 +26,7 @@ $app->match('/', function () use ($app) {
     $thoughts = $query->execute() ? $query->fetchAll(PDO::FETCH_ASSOC) : array();
 
     return $app['twig']->render('index.twig', array(
-        'title'    => 'Deploy Your Thoughts',
+        'title'    => 'Your Thoughts',
         'thoughts' => $thoughts,
     ));
 });
