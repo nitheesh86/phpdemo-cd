@@ -56,7 +56,7 @@ $app->match('/add', function (Request $request) use ($app) {
             }
 
             // Display a success message
-            $alert = array('type' => 'success', 'message' => 'Thank you for sharing your thought-Prod.');
+            $alert = array('type' => 'success', 'message' => 'Thank you for sharing your thought.');
         } catch (Exception $e) {
             // Display an error message
             $alert = array('type' => 'error', 'message' => $e->getMessage());
@@ -64,7 +64,7 @@ $app->match('/add', function (Request $request) use ($app) {
     }
 
     return $app['twig']->render('add.twig', array(
-        'title' => 'Prod-Share Your Thought!',
+        'title' => 'Share Your Thought!',
         'alert' => $alert,
     ));
 });
